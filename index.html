@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome - City Services</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="Index.js"></script>
+</head>
+<body>
+  
+<section class="hero-section">
+  <div class="hero-image">
+    <img style="height: 300px;" src="https://i.ytimg.com/vi/gDOtQB2CCdU/maxresdefault.jpg" />
+  </div>
+  <div class="hero-content">
+    <h1>CityLife Hyderabad</h1>
+    <h3>Your One-Stop Platform for the Best Services in Hyderabad, Sindh</h3>
+<br>
+<h3 style="text-align: center;">Welcome to the login page.</h3>
+<h5 style="color: rgb(167, 64, 64); margin-top: -10px;">Login if you already have Account. Otherwise Signup to create Account..</h5>
+     <button id="loginBtn">Login</button>
+    <button id="signupBtn">Sign Up</button>
+  </div>
+</section>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-inner">
+      <button class="modal-close" id="loginClose">&times;</button>
+      <h3>Login</h3>
+      <form id="loginForm">
+        <label>Email:<input type="email" id="loginEmail" required></label>
+        <label>Password:<input type="password" id="loginPassword" required></label>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Services</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="Services.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="topbar">
+    <div class="brand">CityServices</div>
+    <div class="actions">
+      <button class="back-btn" onclick="window.location.href='WeProject.html'">⬅  Back</button>
+      <button class="back-btn" onclick="openBookings()">My Bookings</button>
+
+    </div>
+  </header>
+
+  <!-- Booking Form Modal -->
+  <div id="bookingModal" class="modal hidden">
+    <div class="modal-inner">
+      <button class="modal-close" onclick="closeModal()">✖</button>
+      <div id="bookingContent"></div>
+    </div>
+  </div>
+
+  <!-- Bookings Modal -->
+  <div id="bookingsModal" class="modal hidden">
+    <div class="modal-inner">
+      <button class="modal-close" onclick="closeBookings()">&times;</button>
+      <h2>My Bookings</h2>
+      <ul id="myBookingsList"></ul>
+    </div>
+  </div>
+
+  
+
+  <!-- Services Section -->
+  <section class="container" id="servicesPage">
+    <h2 id="categoryTitle"></h2>
+    <div id="servicesList" class="service-list"></div>
+  </section>
+
+</body>
+</html>

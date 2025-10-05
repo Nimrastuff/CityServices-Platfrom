@@ -1,0 +1,662 @@
+/* General Styles */
+:root {
+  --bg: #f7f8fb;
+  --card: #fff;
+  --accent: #2b7cff;
+  --muted: #6b7280;
+  --shadow: 0 6px 18px rgba(23,32,84,0.06);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 5px;
+  font-family: Arial, sans-serif;
+  background: url('https://flypix.ai/wp-content/uploads/2022/12/AdobeStock_513654262-scaled.jpeg') no-repeat center center fixed; 
+  background-size: cover !important;
+  color: #111827;
+}
+/* 
+body.home-bg {
+  background: url('https://cdn-blog.zameen.com/blog/wp-content/uploads/2021/03/Cover-1440x625-8.jpg') no-repeat center center fixed;
+  background-size: cover;
+} */
+
+header {
+  background: var(--accent);
+  color:#2b7cff;
+  padding: 1px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 100px;
+  position: sticky;
+  top: 0;
+}
+
+.container {
+  /* text-align: center; */
+  background-color: #fff;
+  max-width: 500px;
+  border-radius: 8px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Forms */
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+form button {
+  padding: 10px 15px;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background: #2b7cff;
+}
+
+/* Home Page */
+.topbar {
+  background: linear-gradient(90deg, #fff, #f1f5ff);
+  height: 60px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e6eefc;
+  position: sticky;
+  top: 0;
+}
+
+.welcome-message {
+  margin-left: 20px;
+  font-style: italic;
+}
+
+.brand {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.searchbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.searchbarInput {
+  padding: 8px 10px;
+  border: 1px solid #dbe4ff;
+  border-radius: 8px;
+}
+
+.searchbar select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e6eefc;
+}
+
+.searchbar button {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.actions button {
+  margin-left: 10px;
+  padding: 8px 12px;
+}
+
+/* Animations */
+.heading {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  color: rgb(191, 210, 255);
+  font-size: 55px;
+  font-family: serif;
+  text-shadow: 0,0,0,0.8;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  font-weight: 600;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 1.2s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Category Cards */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 8px;
+  background: #eee;
+  cursor: pointer;
+  min-width: 130px;
+  text-align: center;
+  font-weight: bold;
+}
+.card:hover{
+  background-color: #d1d1d2;
+}
+
+/* Previous Services Section */
+.previous-services {
+  margin: 40px 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.previous-services h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.previous-services-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.previous-service-card {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  max-width: 250px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 80px;
+  background: linear-gradient(90deg, #2b7cff, #1e63d8);
+  color: white;
+  text-align: center;
+  padding: 2px;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-contact p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin: 10px 0 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+
+.footer .copyright {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+
+/* Doctors Section / Services List */
+.filter {
+  gap: 15px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%; /* ✅ FIXED */
+  justify-content: center; /* ✅ FIXED */
+}
+
+.service-card {
+  text-align: center;
+  background: var(--card);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  width: 100%; /* ✅ FIXED */
+  max-width: 250px; /* ✅ FIXED */
+  margin: 0 auto; /* ✅ FIXED */
+  transition: transform 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  cursor: pointer;
+  width: 100%; /* ✅ FIXED */
+}
+
+.service-button:hover {
+  background:#2b7cff;
+}
+
+/* Back Button on Services Page */
+.back-btn {
+  height: 34px;
+  text-align: center;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  /* padding: 5px 10px; */
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.back-btn:hover {
+  background:#2b7cff;
+}
+
+/* Modals */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-inner {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.modal-close {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+
+
+
+/* Auth Tabs */
+.auth-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.auth-tabs button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 1px solid #333;
+  background: #f2f2f2;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-form.hidden {
+  display: none;
+}
+
+/* Bookings */
+#myBookingsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myBookingsList li {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+#loginBtn, #signupBtn {
+  width: 120px;
+  margin: 10px 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#loginBtn:hover, #signupBtn:hover {
+  background: #1e63d8;
+}
+
+/* ------------------ RESPONSIVE DESIGN ------------------ */
+
+/* Tablets / Medium screens */
+@media (max-width: 1024px) {
+  .categories {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .card {
+    min-width: 120px;
+  }
+
+  .previous-services-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .previous-service-card {
+    max-width: 45%;
+    margin-bottom: 15px;
+  }
+
+  .service-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service-card {
+    width: 220px;
+    margin-bottom: 15px;
+  }
+
+  .modal-inner {
+    max-width: 90%;
+  }
+}
+
+/* Small screens (phones landscape / tablets portrait) */
+@media (max-width: 768px) {
+  header.topbar, .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .heading h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .categories {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card {
+    width: 80%;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .service-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .service-card {
+    width: 90%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .service-button {
+    width: 100%;
+  }
+
+  .modal-inner {
+    width: 95%;
+    padding: 15px;
+  }
+
+  #bookingForm input, #bookingForm select, #bookingForm button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .previous-service-card {
+    max-width: 80%;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 15px 10px;
+  }
+
+  footer a {
+    margin: 0 5px;
+  }
+}
+
+/* Extra small screens (phones portrait) */
+@media (max-width: 480px) {
+  .heading h1 {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+  }
+
+  .service-card p {
+    font-size: 0.8rem;
+  }
+
+  .previous-services h2 {
+    font-size: 1.3rem;
+  }
+
+  .previous-service-card {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ------------------ CITY SERVICES HOMEPAGE STYLES ------------------ */
+
+.hero-section {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  /* margin: 30px auto; */
+  max-width: 1200px;
+  box-shadow: var(--shadow);
+}
+
+.hero-image {
+  flex: 1 1 30%;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.hero-content {
+  flex: 1 1 40%;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* .hero-content p {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-top: -5px;
+  margin-bottom: 10px;
+} */
+
+.cta-button {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  
+}
+
+.cta-button:hover {
+  background-color: #1e63d8;
+}
+
+/* ------------------ RESPONSIVE HERO ------------------ */
+
+@media (max-width: 700px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-content p {
+    text-align:left;
+  }
+
+  .cta-button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.container,
+.hero-section,
+.categories,
+.service-list,
+.previous-services,
+.auth-form,
+.modal-inner {
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  /* background-color: rgba(255, 255, 255, 0.9); */
+}
+
