@@ -7,6 +7,7 @@ document.getElementById("welcomeUser").textContent = `Welcome, ${user.name}!`;
 document.querySelectorAll(".card").forEach(card => {
     card.addEventListener("click", () => {
         const category = card.getAttribute("data-category");
-        window.location.href = `services.html?category=${category}`;
+        window.location.href = `Services.html?category=${category}`;
     });
+
 });
